@@ -45,7 +45,7 @@ for x in range(len(change)):
         nameD=name[x]
 
 averageChange=round(sumchange/float((count-1)),2)
-      
+
 print("Financial Analysis")
 print("----------------------------")
 print("Total Months: "+str(count))
@@ -54,4 +54,12 @@ print("Average Change: "+str(averageChange))
 print("Greatest Increase in Profits: "+nameG+" ($"+str(greatest)+")")
 print("Greateast Decrease in Profits: "+nameD+" ($"+str(lowest)+")")
 
-
+file1 = open("pyBankExport.txt","w")
+file1.write("Financial Analysis \n")
+file1.write("---------------------------- \n")
+file1.write("Total Months: "+str(count)+"\n")
+file1.write("Total: $"+str(total)+"\n")
+file1.write("Average Change: "+str(averageChange)+"\n")
+file1.write("Greatest Increase in Profits: "+nameG+" ($"+str(greatest)+") \n")
+file1.write("Greateast Decrease in Profits: "+nameD+" ($"+str(lowest)+") \n")
+file1.close() 
